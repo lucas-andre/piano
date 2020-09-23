@@ -1,30 +1,30 @@
-const TECLAS_BRANCAS = ['z', 'x', 'c', 'v', 'b', 'n', 'm']
-const TECLAS_PRETAS = ['s', 'd', 'g', 'h', 'j']
+const WHITE_KEYS = ['z', 'x', 'c', 'v', 'b', 'n', 'm']
+const BLACK_KEYS = ['s', 'd', 'g', 'h', 'j']
 
-const teclas = document.querySelectorAll('.tecla')
-const teclasBrancas = document.querySelectorAll('.tecla.Branca')
-const teclasPretas = document.querySelectorAll('.tecla.Preta')
+const keys = document.querySelectorAll('.key')
+const WhiteKeys = document.querySelectorAll('.key.Whites')
+const BlackKeys = document.querySelectorAll('.key.Blacks')
 
-teclas.forEach(tecla => {
-  tecla.addEventListener('click', () => playNote(tecla))
+keys.forEach(key => {
+    key.addEventListener('click', () => playNote(key))
 })
 
 document.addEventListener('keydown', e => {
-  if (e.repeat) return
-  const tecla = e.key
-  const teclasBrancasIndex = TECLAS_BRANCAS.indexOf(tecla)
-  const teclasPretasIndex = TECLAS_PRETAS.indexOf(tecla)
+    if (e.repeat) return
+    const key = e.key
+    const WhiteKeysIndex = WHITE_KEYS.indexOf(key)
+    const BlackKeysIndex = BLACK_KEYS.indexOf(key)
 
-  if (teclasBrancasIndex > -1) playNote(teclasBrancas[teclasBrancasIndex])
-  if (teclasPretasIndex > -1) playNote(teclasPretas[teclasPretasIndex])
+    if (WhiteKeysIndex > -1) playNote(WhiteKeys[WhiteKeysIndex])
+    if (BlackKeysIndex > -1) playNote(BlackKeys[BlackKeysIndex])
 })
 
-function playNote(tecla) {
-  const noteAudio = document.getElementById(tecla.dataset.note)
-  noteAudio.currentTime = 0
-  noteAudio.play()
-  tecla.classList.add('active')
-  noteAudio.addEventListener('ended', () => {
-    tecla.classList.remove('active')
-  })
+function playNote(key) {
+    const noteAudio = document.getElementById(key.dataset.note)
+    noteAudio.currentTime = 0
+    noteAudio.play()
+    key.classList.add('active')
+    noteAudio.addEventListener('ended', () => {
+        key.classList.remove('active')
+    })
 }
