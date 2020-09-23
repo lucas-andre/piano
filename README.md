@@ -1,3 +1,5 @@
+![piano](https://raw.githubusercontent.com/lucas-andre/piano/master/bannerPiano.png)
+
 # 🎹 Piano 
 
 Piano criado em Javascript, HTML e CSS, utilizando arquivos de áudio no formato **.wav**.
