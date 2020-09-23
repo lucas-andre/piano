@@ -19,30 +19,29 @@ div{
     display: flex;
 }
 
-.tecla{
-        height: calc(var(--width) * 4);
-        width: var(--width);
+.key {
+    height: calc(var(--width) * 4);
+    width: var(--width);
 }
 
-.Branca{
+.Whites {
     --width: 80px;
-  background-color: white;
-  border: 1px solid black;
-
+    background-color: white;
+    border: 1px solid black;
 }
 
-.Branca.active{
+.Whites.active {
     background-color: darkgray;
 }
 
-.Preta{
+.Blacks {
     --width: 45px;
-  background-color: black;
+    background-color: black;
     margin-left: calc(var(--width) / -2);
     margin-right: calc(var(--width) / -2);
     z-index: 2;
 }
 
-.Preta.active{
+.Blacks.active {
     background-color: rgb(70, 68, 68);
 }
