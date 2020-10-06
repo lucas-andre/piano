@@ -16,7 +16,7 @@ Acesse: https://lucas-andre.github.io/piano
 Baixe os arquivos compactados em .zip diretamente do repositório.
 
 **Por linha de comando.**
-Abra o Git Bash e cole: `git clone https://github.com/lucas-andre/piano`
+Abra o Git Bash e cole: `git clone https://github.com/lucas-andre/piano.git`
 
 
 ## 📃 Licença 
